@@ -28,6 +28,11 @@ class HighScoresTest(unittest.TestCase):
 
     # Test top three from list of scores
 
+    def test_get_top_three_scores(self):
+        expected_value = [34, 22, 10]
+        actual_value = personal_top_three(self.scores)
+        self.assertEqual(expected_value, actual_value)
+
     # Test ordered from highest tp lowest
 
     # Test top three when there is a tie
